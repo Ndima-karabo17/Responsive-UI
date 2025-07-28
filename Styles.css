@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: rgb(244, 251, 251);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar>ul>li {
+    list-style: none;
+}
+
+.navbar>ul>li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar>ul>li :hover {
+    color: rgb(61, 173, 211);
+}
+
+.heroSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.herotext {
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    margin: 50px;
+    flex: 1;
+}
+
+.heroimage {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.heroimage>img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 40px;
+    background-color: lightgreen;
+    height: 500px;
+}
+
+.cards>div {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    max-width: 350px;
+    height: 300px;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 40px;
+
+}
+
+.footerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px
+}
+
+.second>ul {
+    list-style: none;
+    display: flex;
+    gap: 3px;
+}
+
+.second>ul>li>a {
+    text-decoration: none;
+    color: white
+}
+
+@media(max-width:1024px) {
+    nav ul {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .herotext {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin: 10px 0 0 0;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cards>div {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:480px) {
+    .herotext {
+        font-size: 20px;
+        letter-spacing: 0.2em;
+    }
+
+    .cards {
+        padding: 21px 10px;
+    }
+
+    .cards div {
+        font-size: 18px;
+    }
+
+}
+
+.heroSection>.herotext>p {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
