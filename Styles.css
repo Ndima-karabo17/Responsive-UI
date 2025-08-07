@@ -2,21 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
     font-family: sans-serif;
     background-color: white;
     overflow-x: hidden;
-
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     background: rgb(244, 251, 251);
+    padding: 20px;
 }
 
 ul {
@@ -26,16 +26,16 @@ ul {
     gap: 50px;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
     list-style: none;
 }
 
-.navbar>ul>li a {
+.navbar > ul > li a {
     text-decoration: none;
     color: black;
 }
 
-.navbar>ul>li :hover {
+.navbar > ul > li a:hover {
     color: rgb(61, 173, 211);
 }
 
@@ -44,6 +44,7 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .herotext {
@@ -58,10 +59,9 @@ ul {
     flex: 1;
     text-align: center;
     padding: 20px;
-
 }
 
-.heroimage>img {
+.heroimage > img {
     width: 100%;
     height: auto;
     display: block;
@@ -76,25 +76,23 @@ ul {
     gap: 15px;
     padding: 30px 40px;
     background-color: lightgreen;
-    height: 500px;
 }
 
-.cards>div {
+.cards > div {
     color: white;
     background-color: black;
     border-radius: 10px;
     width: 100%;
     padding: 15px;
     max-width: 350px;
-    height: 300px;
-
+    height: auto;
 }
 
 footer {
     background-color: black;
     color: white;
-    height: 40px;
-
+    height: auto;
+    padding: 10px 0;
 }
 
 .footerSection {
@@ -102,72 +100,99 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 5px
+    padding: 5px 20px;
 }
 
-.second>ul {
+.second > ul {
     list-style: none;
     display: flex;
-    gap: 3px;
+    gap: 10px;
 }
 
-.second>ul>li>a {
+.second > ul > li > a {
     text-decoration: none;
-    color: white
-}
-
-@media(max-width:1024px) {
-    nav ul {
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .herotext {
-        flex-direction: column;
-    }
-
-}
-
-@media (max-width:768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        margin: 10px 0 0 0;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .cards>div {
-        max-width: 100%;
-    }
-
-}
-
-@media (max-width:480px) {
-    .herotext {
-        font-size: 20px;
-        letter-spacing: 0.2em;
-    }
-
-    .cards {
-        padding: 21px 10px;
-    }
-
-    .cards div {
-        font-size: 18px;
-    }
-
-}
-
-.heroSection>.herotext>p {
-    text-align: center;
+    color: white;
 }
 
 .logo {
     width: 100px;
     height: 100px;
     border-radius: 20px;
+}
+
+.heroSection > .herotext > p {
+    text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar ul {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .heroSection {
+        flex-direction: column;
+    }
+
+    .herotext {
+        margin: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards > div {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .herotext {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        margin: 10px;
+    }
+
+    .cards {
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    .cards > div {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .navbar {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .footerSection {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
 }
