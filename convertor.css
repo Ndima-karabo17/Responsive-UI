@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 248, 234);
+    background-color: #1D976C;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
 }
 
 main {
@@ -10,7 +11,7 @@ main {
     padding: 30px;
     width: 90%;
     max-width: 800px;
-    background-color: white;
+    background-color: #16A085;
     border-radius: 10px;
 }
 
@@ -42,7 +43,7 @@ h2 {
 .tabs-btn {
     flex: 1 1 auto;
     padding: 12px 10px;
-    background-color: #dbd3d3;
+    background-color: #71B280;
     border: none;
     border-radius: 8px;
     font-size: 15px;
@@ -52,7 +53,7 @@ h2 {
 .btn {
   flex: 1 1 auto;
     padding: 12px 10px;
-    background-color: #dbd3d3;
+    background-color: #71B280;
     border: none;
     border-radius: 8px;
     font-size: 15px;
@@ -60,7 +61,7 @@ h2 {
 }
 
 .active, .btn:hover {
-  background-color: blue;
+  background-color: #93EDC7;
   color: white;
 }
 
@@ -91,7 +92,8 @@ input {
 }
 
 input:hover {
-    border: 2px solid blue;
+    border: 2px solid #93EDC7;
+    
 }
 
 select {
@@ -108,29 +110,44 @@ select {
     margin-bottom: 25px;
 }
 
-.calculate-button > button {
+.calculate-button > button, #temperature-content > button {
     padding: 10px 25px;
     font-size: 15px;
-    background-color: #0056d2;
+    background-color: #71B280;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     width: 600px;
 }
-
-.calculate-button > button:hover {
-    background-color: #003a98;
+#temperature-content > button{
+    width: 300px;
+    margin-top: 15px;
+}
+.calculate-button > button:hover , #temperature-content > button:hover {
+    background-color: #93EDC7;
+    color:black;
 }
 
 .estimate-time {
-    border-left: 4px solid #0056d2;
+    border-left: 10px solid #93F9B9;
     background-color: #eee;
     padding: 15px;
     border-radius: 6px;
     font-weight: bold;
     font-size: 16px;
+    color:black;
 }
 .estimate-time > p{
     font-weight: lighter;
+    
+}
+.tab-content {
+    display: none;
+}
+.active-content {
+    display: block;
+}
+.file-size{
+    padding-bottom: 6px;
 }
