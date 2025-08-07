@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Hub Web App</title>
+    <link rel="stylesheet" href="convertor.css">
+</head>
+<body>
+    <main>
+        <h2>Convertor Hub</h2>
+        <p class="paragraph1">A collection of useful conversion tools</p>
+
+        <div id="tabs">
+            <button class="tabs-btn active fileTran" onclick="clearText()">File Transfer</button>
+            <button class="tabs-btn temp" onclick="clearText()">Temperature</button>
+            <button class="tabs-btn scientific" onclick="clearText()">Scientific</button>
+            <button class="tabs-btn metrix" onclick="clearText()">Metric</button>
+        
+        </div>
+        <p class="paragraph2"> File Transfer Time Calculator</p>
+        <div class="file-size">
+            <input type="number"  id="size-type" name="size" required/>
+           <select name="size-speed" id="size-speed">
+            <option value="gigabytes">Gigabytes (GB)</option>
+            <option value="megabytes">Megabytes (MB)</option>
+            <option value="kilobytes">Kilobytes (KB)</option>
+           </select>
+        </div>
+        <div class="internet-speed">
+            <input type="number" id="speed" name="speed" required/>
+           <select name="speed-name" id="speed-name">
+            <option value="megabits">Megabits/sec (Mbps)</option>
+            <option value="gigabits">Gigabits/sec (Gbps)</option>
+            <option value="kilobits">Kilobits/sec (Kbps)</option>
+            
+           </select>
+        </div>
+        <div class="calculate-button">
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="estimate-time">
+            <label for="time-estimated" id="time-estimated">Estimated Time:</label><br>
+           <p></p>
+        </div>
+
+    </main>
+    <script src="converter.js"></script>
+</body>
+</html>
